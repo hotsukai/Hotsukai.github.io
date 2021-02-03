@@ -1,120 +1,150 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
-        integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+      integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kaihotsu Kotaro</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="app">
-    <div class="main">
-
-        <h1 class="title is-3">開發功太郎(Kaihotsu Kotaro)</h1>
+      <div class="main">
+        <h1 class="title is-3">
+          開發功太郎<br class="is-mobile" />(Kaihotsu Kotaro)
+        </h1>
         <section class="profile">
-            <h2 class="title is-4" class="card-title">About me</h2>
-            <hr />
-            <div class="block">
-                <p>2000年生まれ</p>
-                <p>神奈川県出身</p>
-                <p>筑波大学 情報学群 情報メディア創成学類 3年</p>
-                <p>融合知能デザイン研究室</p>
-            </div>
+          <h2 class="title is-4" class="card-title">About me</h2>
+          <hr />
+          <div class="block">
+            <p>2000年生まれ</p>
+            <p>神奈川県出身</p>
+            <p>筑波大学 情報学群 情報メディア創成学類 3年</p>
+            <p>融合知能デザイン研究室</p>
+          </div>
         </section>
         <section class="contact">
-            <h2 class="title is-4" class="block-title">Contact</h2>
-            <hr />
-            <div class="block">
-                <p>
-                    <dt><i class="fas fa-envelope"></i> Mail</dt>
-                    <dd>kotaro.kaihotsu.2021b@mlab.info</dd>
-                </p>
-                <p>
-                    <dt><i class="fas fa-map-marker-alt"></i> 研究室住所</dt>
-                    <dd>
-                        〒305-8550<br> つくば市春日１－２
-                        筑波大学 図書館情報メディア系<br>
-                        森嶋・松原・伊藤研究室</dd>
-                </p>
-                <p>
-                    <dt><i class="fas fa-phone"></i> 研究室電話番号</dt>
-                    <dd>029-859-1556</dd>
-                </p>
-            </div>
-
+          <h2 class="title is-4" class="block-title">Contact</h2>
+          <hr />
+          <div class="block">
+            <p>
+              <dt><i class="fas fa-envelope"></i> Mail</dt>
+              <dd>kotaro.kaihotsu.2021b@mlab.info</dd>
+            </p>
+            <p>
+              <dt><i class="fas fa-map-marker-alt"></i> 研究室住所</dt>
+              <dd>
+                〒305-8550<br />
+                つくば市春日１－２ 筑波大学 図書館情報メディア系<br />
+                森嶋・松原・伊藤研究室
+              </dd>
+            </p>
+            <p>
+              <dt><i class="fas fa-phone"></i> 研究室電話番号</dt>
+              <dd>029-859-1556</dd>
+            </p>
+          </div>
         </section>
         <section class="product">
-            <h2 class="title is-4" class="block-title">Product</h2>
-            <hr />
-            <div class="blocks columns">
-                <div class="column is-half" v-for="(product,i) in products" :key="'p-'+i">
-                   <div class="block product-block">
-                       <h3 class="title is-5">{{product.title}}</h3>
-                        <p>{{product.description}}</p>
-                        <p class="tags"><span class="tag is-dark is-rounded" v-for="(tag,i) in product.langs" :key="'tag-'+i">{{tag}}</span></p>
-                   </div> 
-                </div>
-                </div>
+          <h2 class="title is-4" class="block-title">Product</h2>
+          <hr />
+          <div class="blocks columns">
+            <div
+              class="column is-6 is-12-mobile"
+              v-for="(product,i) in products"
+              :key="'p-'+i"
+            >
+              <div class="block product-block">
+                <img v-if="product.imageSrc" :src="product.imageSrc" />
+                <h3 class="title is-5">{{product.title}}</h3>
+                <p v-html="product.description"></p>
+                <p class="tags">
+                  <span
+                    class="tag is-dark is-rounded"
+                    v-for="(tag,i) in product.langs"
+                    :key="'tag-'+i"
+                    >{{tag}}</span
+                  >
+                </p>
+              </div>
             </div>
+          </div>
         </section>
+      </div>
     </div>
-</div>
-</body>
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-<script type="text/javascript" src="main.js"></script>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <script type="text/javascript" src="main.js"></script>
 </html>
 <style>
-    body {
-        background-color: #f0f0f0;
-    }
+  body {
+    background-color: #f0f0f0;
+    font-size: 16px;
+  }
 
-    section {
-        margin-top: 4em;
-    }
+  section {
+    margin: 3em 0em;
+  }
 
-    h1,
+  /* h1,
     h2,
     h3 {
         margin: 0;
-    }
+    } */
 
-    ul {
-        list-style: none;
-    }
-    dd{
-        margin-left: 2em;
-    }
+  ul {
+    list-style: none;
+  }
+  dd {
+    margin-left: 2em;
+  }
 
+  .main {
+    padding: 3em;
+  }
+  .is-mobile {
+    display: none;
+  }
+  @media screen and (max-width: 480px) {
+    .is-mobile {
+      display: inline;
+    }
     .main {
-        padding: 3em;
+      padding: 1em;
     }
+  }
 
-    .block {
-        padding: 1em 3em;
-        border-radius: 35px;
-        background: #eeeeee;
-        box-shadow: 7px 7px 14px #cccccc,
-            -7px -7px 14px #ffffff;
-    }
+  .block {
+    padding: 1em 3em;
+    border-radius: 35px;
+    background: #eeeeee;
+    box-shadow: 7px 7px 14px #cccccc, -7px -7px 14px #ffffff;
+  }
 
-    .block-title {
-        font-size: 1.5em;
-    }
+  .block-title {
+    font-size: 1.5em;
+  }
 
-    .blocks {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
+  .blocks {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
 
-    .product-block {
-        width: 100%;
-    }
+  .product-block {
+    width: 100%;
+  }
 
-    .icon {
-        margin-right: 0.5em;
-    }
+  .icon {
+    margin-right: 0.5em;
+  }
 </style>
