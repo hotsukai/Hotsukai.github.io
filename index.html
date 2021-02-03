@@ -3,16 +3,21 @@
 
 <head>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+        integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <title>Kaihotsu Kotaro</title>
 </head>
 
 <body>
+    <div id="app">
     <div class="main">
 
-        <h1>開發功太郎(Kaihotsu Kotaro)</h1>
+        <h1 class="title is-3">開發功太郎(Kaihotsu Kotaro)</h1>
         <section class="profile">
-            <div class="card">
-                <h2 class="card-title">About me</h2>
+            <h2 class="title is-4" class="card-title">About me</h2>
+            <hr />
+            <div class="block">
                 <p>2000年生まれ</p>
                 <p>神奈川県出身</p>
                 <p>筑波大学 情報学群 情報メディア創成学類 3年</p>
@@ -20,68 +25,96 @@
             </div>
         </section>
         <section class="contact">
-            <div class="card">
-                <h2 class="card-title">Contact</h2>
+            <h2 class="title is-4" class="block-title">Contact</h2>
+            <hr />
+            <div class="block">
                 <p>
-                    <dt>Mail</dt>
+                    <dt><i class="fas fa-envelope"></i> Mail</dt>
                     <dd>kotaro.kaihotsu.2021b@mlab.info</dd>
                 </p>
                 <p>
-                    <dt>研究室住所</dt>
+                    <dt><i class="fas fa-map-marker-alt"></i> 研究室住所</dt>
                     <dd>
                         〒305-8550<br> つくば市春日１－２
                         筑波大学 図書館情報メディア系<br>
                         森嶋・松原・伊藤研究室</dd>
                 </p>
                 <p>
-                    <dt> 研究室電話番号</dt>
+                    <dt><i class="fas fa-phone"></i> 研究室電話番号</dt>
                     <dd>029-859-1556</dd>
                 </p>
             </div>
 
         </section>
-        <section class="contact">
-            <div class="card">
-                <h2 class="card-title">Product</h2>
-
-                <p>Under Construction</p>
+        <section class="product">
+            <h2 class="title is-4" class="block-title">Product</h2>
+            <hr />
+            <div class="blocks columns">
+                <div class="column is-half" v-for="(product,i) in products" :key="'p-'+i">
+                   <div class="block product-block">
+                       <h3 class="title is-5">{{product.title}}</h3>
+                        <p>{{product.description}}</p>
+                        <p class="tags"><span class="tag is-dark is-rounded" v-for="(tag,i) in product.langs" :key="'tag-'+i">{{tag}}</span></p>
+                   </div> 
+                </div>
+                </div>
             </div>
         </section>
     </div>
+</div>
 </body>
-
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+<script type="text/javascript" src="main.js"></script>
 </html>
 <style>
     body {
-        background-color: #eeeeee;
+        background-color: #f0f0f0;
     }
 
     section {
-        margin-top: 3em;
+        margin-top: 4em;
     }
 
     h1,
-    h2 {
+    h2,
+    h3 {
         margin: 0;
     }
 
     ul {
         list-style: none;
     }
+    dd{
+        margin-left: 2em;
+    }
 
     .main {
         padding: 3em;
     }
 
-    .card {
+    .block {
         padding: 1em 3em;
         border-radius: 35px;
         background: #eeeeee;
-        box-shadow: 35px 35px 70px #cacaca,
-            -35px -35px 70px #ffffff;
+        box-shadow: 7px 7px 14px #cccccc,
+            -7px -7px 14px #ffffff;
     }
 
-    .card-title {
+    .block-title {
         font-size: 1.5em;
+    }
+
+    .blocks {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .product-block {
+        width: 100%;
+    }
+
+    .icon {
+        margin-right: 0.5em;
     }
 </style>
