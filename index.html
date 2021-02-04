@@ -13,6 +13,8 @@
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300&display=swap" rel="stylesheet">
     <title>Kaihotsu Kotaro</title>
   </head>
 
@@ -68,6 +70,13 @@
             </p>
           </div>
         </section>
+        <!-- <section class="publication">
+          <h2 class="title is-4" class="block-title">Publication</h2>
+          <hr />
+          <div class="block">
+            <p></p>
+          </div>
+        </section> -->
         <section class="product">
           <h2 class="title is-4" class="block-title">Product</h2>
           <hr />
@@ -92,9 +101,11 @@
                       <i class="fab fa-github"></i>
                     </span>
                   </a>
+                  <br/>
+                  <span class="is-size-7">{{product.year}}</span>
+                  <span class="is-size-7" v-show="product.isTeam">(共同制作)</span>
                 </h3>
                 <p v-html="product.description"></p>
-                <p v-show="product.isTeam">(共同制作)</p>
                 <p class="tags">
                   <span
                     class="tag is-dark is-rounded"
@@ -117,17 +128,12 @@
   body {
     background-color: #f0f0f0;
     font-size: 16px;
+    font-family: 'M PLUS 1p', sans-serif;
   }
 
   section {
     margin: 3em 0em;
   }
-
-  /* h1,
-    h2,
-    h3 {
-        margin: 0;
-    } */
 
   ul {
     list-style: none;
