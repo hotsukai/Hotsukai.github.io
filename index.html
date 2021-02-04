@@ -13,8 +13,11 @@
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <title>Kaihotsu Kotaro</title>
   </head>
 
@@ -101,9 +104,11 @@
                       <i class="fab fa-github"></i>
                     </span>
                   </a>
-                  <br/>
+                  <br />
                   <span class="is-size-7">{{product.year}}</span>
-                  <span class="is-size-7" v-show="product.isTeam">(共同制作)</span>
+                  <span class="is-size-7" v-show="product.isTeam"
+                    >(共同制作)</span
+                  >
                 </h3>
                 <p v-html="product.description"></p>
                 <p class="tags">
@@ -128,7 +133,7 @@
   body {
     background-color: #f0f0f0;
     font-size: 16px;
-    font-family: 'M PLUS 1p', sans-serif;
+    font-family: "M PLUS 1p", sans-serif;
   }
 
   section {
@@ -139,12 +144,9 @@
     list-style: none;
   }
   dd {
-    margin-left: 2em;
+    margin-left: 3.5em;
   }
 
-  .main {
-    padding: 3em;
-  }
   .is-mobile {
     display: none;
   }
@@ -158,6 +160,22 @@
     border-radius: 35px;
     background: #eeeeee;
     box-shadow: 7px 7px 14px #cccccc, -7px -7px 14px #ffffff;
+  }
+  .main {
+    padding: 10em;
+  }
+  @media screen and (min-width: 1300px) {
+    .main{padding-right: 20%; padding-left: 20%;}
+  }
+  @media screen and (max-width: 800px) {
+    .main {
+      padding: 8em;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .main {
+      padding: 4em;
+    }
   }
   @media screen and (max-width: 480px) {
     /* スマホのみ */
