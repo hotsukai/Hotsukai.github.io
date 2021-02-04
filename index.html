@@ -74,6 +74,7 @@
           <div class="blocks columns">
             <div
               class="column is-6 is-12-mobile product-block-wrapper"
+              :class="{'is-left':i%2==0,'is-right':i%2==1}"
               v-for="(product,i) in products"
               :key="'p-'+i"
             >
@@ -153,6 +154,7 @@
     box-shadow: 7px 7px 14px #cccccc, -7px -7px 14px #ffffff;
   }
   @media screen and (max-width: 480px) {
+    /* スマホのみ */
     .main {
       padding: 1em;
     }
@@ -168,17 +170,32 @@
   }
 
   .product-block-wrapper {
-    padding: 1em 2em 3em 2em;
+    padding: 1em 0em 3em 0em;
   }
 
-  .block-title {
-    font-size: 1.5em;
+  @media screen and (min-width: 770px) {
+    /* タブレットより大きいとき */
+    .is-right {
+      padding-left: 2em;
+      padding-right: 0em;
+    }
+    .is-left {
+      padding-right: 2em;
+      padding-left: 0em;
+    }
+    .block-title {
+      font-size: 1.5em;
+    }
   }
-
   .blocks {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+  }
+
+  .columns {
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .icon {
