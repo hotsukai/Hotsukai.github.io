@@ -5,7 +5,7 @@ const app = new Vue({
       {
         title: "HigaCoffee Database",
         year: "2020/8-",
-        description: "T-ACT発の公認サークルHiga Coffeeのシステム。<br>データを活用することでその人にぴったりなコーヒーを抽出するお手伝いをするサービス。<br>バックエンド・フロントエンド・PMを担当",
+        description: "T-ACT発の公認サークルHiga Coffeeのシステム。<br>データを活用することでその人にぴったりなコーヒーを抽出するお手伝いをする。<br>バックエンド・フロントエンド・PMを担当",
         langs: ["Nuxt.js","TypeScript", "Flask", "Firebase"],
         isTeam: true,
         imageSrc: "images/higa.png",
