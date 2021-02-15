@@ -5,7 +5,7 @@ const app = new Vue({
       {
         title: "HigaCoffee Database",
         year: "2020/8-",
-        description: "T-ACT発の公認サークルHiga Coffeeのシステム。<br>データを活用することでその人にぴったりなコーヒーを抽出するお手伝いをする。<br>バックエンド・フロントエンド・PMを担当",
+        description: "T-ACT発の筑波大学公認サークルHiga Coffeeのシステム。<br>データを活用することでその人にぴったりなコーヒーを抽出するお手伝いをする。<br>バックエンド・フロントエンド・PMを担当。",
         langs: ["Nuxt.js","TypeScript", "Flask", "Firebase"],
         isTeam: true,
         imageSrc: "images/higa.jpg",
@@ -15,7 +15,7 @@ const app = new Vue({
       {
         title: "Hobeeeeee!!",
         year: "2020/10-2021/1",
-        description: `<a href="https://enpit.coins.tsukuba.ac.jp/">enPiT</a>で制作。新しい趣味を見つけたい・広めたい人の願望を叶えるWebサービス。好きそうな趣味をつながりから探せることによって、サークルの新歓のように趣味を見つける・広めることができる。<br>優秀賞, 情報学群長特別表彰受賞`,
+        description: `<a href="https://enpit.coins.tsukuba.ac.jp/">enPiT</a>で制作。新しい趣味を見つけたい・広めたい人の願望を叶えるWebサービス。好きそうな趣味をつながりから探せることによって、サークルの新歓のように趣味を見つける・広めることができる。<br>優秀賞, 情報学群長特別表彰受賞。`,
         langs: ["Nuxt.js", "Firebase"],
         isTeam: true,
         imageSrc: "images/hobeeeeee.jpg",
@@ -45,7 +45,7 @@ const app = new Vue({
       {
         title: "ほんとも",
         year: "2020/9",
-        description: "電子書籍の売上向上を目指しインターンで制作。<br/>アジャイル・スクラム手法を利用し開発。バックエンドとのインターフェイスを主に担当",
+        description: "電子書籍の売上向上を目指しインターンで制作。<br/>アジャイル・スクラム手法を利用し開発。バックエンドとのインターフェイスを主に担当。",
         langs: ["Vue.js", "Firebase"],
         isTeam: true,
         imageSrc: "images/hontomo.jpg",
@@ -75,7 +75,7 @@ const app = new Vue({
       {
         title: "ShareTsukuba",
         year: "2020/6",
-        description: "Railsチュートリアルに沿いながら、Docker上で動作するオリジナルのアプリケーションを作成した。<br/>お店をフォルダにまとめてシェアできるプロダクト。",
+        description: "Railsチュートリアルをベースに、Dockerを利用しオリジナルのアプリケーションを作成した。<br/>お店をフォルダにまとめてシェアすることができる。",
         langs: ["Rails", "Docker"],
         isTeam: false,
         imageSrc: "images/shareTsukuba.jpg",
@@ -86,7 +86,7 @@ const app = new Vue({
         title: "筑波大学宿舎祭公式サイト",
         year: "2020/3-2020/4",
         description:
-          "筑波大学宿舎祭(やどかり祭)の広報のため制作。<br>PM・コーダーを担当",
+          "第46回筑波大学宿舎祭(やどかり祭)の広報のため制作。<br>PM・コーダーを担当。",
         langs: ["HTML", "CSS", "jQuery"],
         isTeam: true,
         imageSrc: "/images/yado.jpg",
