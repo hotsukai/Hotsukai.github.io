@@ -32,7 +32,7 @@ const app = new Vue({
         title: "ぷろぐらみんぐうぃっち",
         year: "2020/12-2021/1",
         description:
-          "プログラミングが必修化される小学校でスキルを定量的に評価できるかに疑問を持ち、小学生向けの競技プログラミングをテーマに制作。<br>ランキングや問題取得などバックエンドとのインターフェイスを担当した。",
+          "Unityで制作されたAndroidアプリ。<br>プログラミングが必修化される小学校で子どものスキルを定量的に評価できるかに疑問を持ち、小学生向けの競技プログラミングをテーマに設定した。<br>ランキングや問題取得などバックエンドとのインターフェイスを担当した。",
         langs: ["Unity (C#)", "Firebase", "Android"],
         isTeam: true,
         imageSrc: "images/programmingWitch.jpg",
@@ -87,7 +87,7 @@ const app = new Vue({
         year: "2020/6",
         description:
           "Railsチュートリアルをベースに、Dockerを利用しオリジナルのアプリケーションを作成した。<br/>お店をフォルダにまとめてシェアすることができる。",
-        langs: ["Rails", "Docker"],
+        langs: ["Rails(Ruby)", "Docker"],
         isTeam: false,
         imageSrc: "images/shareTsukuba.jpg",
         github: "https://github.com/Hotsukai/share_tsukuba",
@@ -97,7 +97,7 @@ const app = new Vue({
         title: "筑波大学宿舎祭公式サイト",
         year: "2020/3-2020/4",
         description:
-          "第46回筑波大学宿舎祭(やどかり祭)の広報のため制作。<br>PM・コーダーを担当。",
+          "第46回筑波大学宿舎祭(やどかり祭)の広報のため制作。<br>PM・コーダーを担当。<br>また同委員会に情報系の組織を立ち上げ、DX化の推進・組織の技術力の向上を図った。",
         langs: ["HTML", "CSS", "jQuery"],
         isTeam: true,
         imageSrc: "/images/yado.jpg",
