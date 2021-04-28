@@ -5,7 +5,8 @@ const app = new Vue({
       {
         title: "HigaCoffee Database",
         year: "2020/8-",
-        description: "T-ACT発の筑波大学公認サークルHiga Coffeeのシステム。<br>データを活用することでその人にぴったりなコーヒーを抽出するお手伝いをする。<br>バックエンド・フロントエンド・PMを担当。",
+        description:
+          "T-ACT発の筑波大学公認サークルHiga Coffeeのシステム。<br>データを活用することでその人にぴったりなコーヒーを抽出するお手伝いをする。<br>バックエンド・フロントエンド・PMを担当。",
         langs: ["Nuxt.js (TypeScript)", "Flask (Python)", "Firebase"],
         isTeam: true,
         imageSrc: "images/higa.jpg",
@@ -15,7 +16,12 @@ const app = new Vue({
       {
         title: "Hobeeeeee!!",
         year: "2020/10-2021/1",
-        description: `<a href="https://enpit.coins.tsukuba.ac.jp/">enPiT</a>で制作。新しい趣味を見つけたい・広めたい人の願望を叶えるWebサービス。好きそうな趣味をつながりから探せることによって、サークルの新歓のように趣味を見つける・広めることができる。<br>優秀賞, 情報学群長特別表彰受賞。<br>2020年度 enPiT ビジネスシステムデザイン分野ワークショップ プロダクト賞受賞。`,
+        description: `<a href="https://enpit.coins.tsukuba.ac.jp/">enPiT-BizSysD x 筑波大学</a>で制作。新しい趣味を見つけたい・広めたい人の願望を叶えるWebサービス。好きそうな趣味をつながりから探せることによって、サークルの新歓のように趣味を見つける・広めることができる。
+        <ul>
+        <li style="margin:0.5rem 0;">2020年度 enPiT 筑波大学 成果発表会 優秀賞, 情報学群長特別表彰受賞。(<a href="https://speakerdeck.com/hotsukai/seeeeee-d-enpit-bizsysdxzhu-bo-da-xue-cheng-guo-fa-biao-hui">スライド</a>)</li>
+        <li style="margin:0.5rem 0;">2020年度 enPiT ビジネスシステムデザイン分野ワークショップ プロダクト賞受賞。(<a href="https://speakerdeck.com/hotsukai/seeeeee-dtimu-2020nian-du-enpitbizinesusisutemudezainfen-ye-wakusiyotupu">スライド</a>)</li>
+        <li style="margin:0.5rem 0;">AgilePBL祭りで発表(<a href="https://speakerdeck.com/hotsukai/seeeeee-d-agilepblji-rifa-biao-suraido">スライド</a>)</li>
+        </ul>`,
         langs: ["Nuxt.js (JavaScript)", "Firebase"],
         isTeam: true,
         imageSrc: "images/hobeeeeee.jpg",
@@ -25,8 +31,9 @@ const app = new Vue({
       {
         title: "ぷろぐらみんぐうぃっち",
         year: "2020/12-2021/1",
-        description: "プログラミングが必修化される小学校でスキルを定量的に評価できるかに疑問を持ち、小学生向けの競技プログラミングをテーマに制作。<br>ランキングや問題取得などバックエンドとのインターフェイスを担当した。",
-        langs: ["Unity (C#)", "Firebase","Android"],
+        description:
+          "プログラミングが必修化される小学校でスキルを定量的に評価できるかに疑問を持ち、小学生向けの競技プログラミングをテーマに制作。<br>ランキングや問題取得などバックエンドとのインターフェイスを担当した。",
+        langs: ["Unity (C#)", "Firebase", "Android"],
         isTeam: true,
         imageSrc: "images/programmingWitch.jpg",
         github: "",
@@ -35,7 +42,8 @@ const app = new Vue({
       {
         title: "StoreSpotWith!!",
         year: "2020/11",
-        description: "インターンで制作したLINE Bot。<br>スラッシュコマンドを使うことで、トークルーム・グループごとに行きたいところリストを作成する事ができる。<br>LINE Botの特性を活かせるようにこのコンセプトを考えた。",
+        description:
+          "インターンで制作したLINE Bot。<br>スラッシュコマンドを使うことで、トークルーム・グループごとに行きたいところリストを作成する事ができる。<br>LINE Botの特性を活かせるようにこのコンセプトを考えた。",
         langs: ["Rails (Ruby)"],
         isTeam: false,
         imageSrc: "",
@@ -45,7 +53,8 @@ const app = new Vue({
       {
         title: "ほんとも",
         year: "2020/9",
-        description: "電子書籍の売上向上を目指しインターンで制作。<br/>アジャイル・スクラム手法を利用し開発。バックエンドとのインターフェイスを主に担当。",
+        description:
+          "電子書籍の売上向上を目指しインターンで制作。<br/>アジャイル・スクラム手法を利用し開発。バックエンドとのインターフェイスを主に担当。",
         langs: ["Vue.js (JavaScript)", "Firebase"],
         isTeam: true,
         imageSrc: "images/hontomo.jpg",
@@ -65,7 +74,8 @@ const app = new Vue({
       {
         title: "RefriSuggester",
         year: "2020/7",
-        description: "授業のハッカソンで制作。「冷蔵庫にあるもので作れるものを知りたい」がコンセプトのLINE Bot。<br/>企画・APIからのデータ取得・LINEリッチメッセージ整形などを担当",
+        description:
+          "授業のハッカソンで制作。「冷蔵庫にあるもので作れるものを知りたい」がコンセプトのLINE Bot。<br/>企画・APIからのデータ取得・LINEリッチメッセージ整形などを担当",
         langs: ["Sinatra (Ruby)", "Firebase", "Elasticsearch"],
         isTeam: true,
         imageSrc: "",
@@ -75,7 +85,8 @@ const app = new Vue({
       {
         title: "ShareTsukuba",
         year: "2020/6",
-        description: "Railsチュートリアルをベースに、Dockerを利用しオリジナルのアプリケーションを作成した。<br/>お店をフォルダにまとめてシェアすることができる。",
+        description:
+          "Railsチュートリアルをベースに、Dockerを利用しオリジナルのアプリケーションを作成した。<br/>お店をフォルダにまとめてシェアすることができる。",
         langs: ["Rails", "Docker"],
         isTeam: false,
         imageSrc: "images/shareTsukuba.jpg",
