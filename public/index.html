@@ -2,12 +2,6 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <script>
-      window.onload = function () {
-        const contentPanel = document.getElementById("content");
-        contentPanel.classList.remove("not-show");
-      };
-    </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
       async
@@ -22,11 +16,11 @@
 
       gtag("config", "G-0QPQE2D2GH");
     </script>
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
     />
-    <link rel="stylesheet" href="index.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
@@ -43,114 +37,10 @@
   </head>
 
   <body>
-    <div id="content" class="not-show">
-      <div class="main">
-        <h1 class="title is-3">
-          開發功太郎<br class="is-mobile" />(Kaihotsu Kotaro)
-        </h1>
-        <section class="profile">
-          <h2 class="title is-4" class="card-title">About me</h2>
-          <hr />
-          <div class="block">
-            <div class="columns">
-              <div class="column is-6 is-12-mobile">
-                <img src="images/kaihotsu.jpg" id="mypic" />
-              </div>
-              <div class="column is-6 is-12-mobile">
-                <p>2000年生まれ</p>
-                <p>神奈川県出身</p>
-                <p>筑波大学 情報学群 情報メディア創成学類 3年</p>
-                <p>融合知能デザイン研究室</p>
-                <a class="microtask repeat" href="//crowd4u.org">
-                  <img src="//crowd4u.org/img/crowd4u_banner364x93.png" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="contact">
-          <h2 class="title is-4" class="block-title">Contact</h2>
-          <hr />
-          <div class="block">
-            <p>
-              <dt>
-                <span class="icon"><i class="fas fa-envelope"></i></span> Mail
-              </dt>
-              <dd>kotaro.kaihotsu.2021b@mlab.info</dd>
-            </p>
-            <p>
-              <dt>
-                <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
-                研究室住所
-              </dt>
-              <dd>
-                〒305-8550<br />
-                つくば市春日１－２ 筑波大学 図書館情報メディア系<br />
-                森嶋・松原・伊藤研究室
-              </dd>
-            </p>
-            <p>
-              <dt>
-                <span><i class="fas fa-phone"></i></span> 研究室電話番号
-              </dt>
-              <dd>029-859-1556</dd>
-            </p>
-          </div>
-        </section>
-        <!-- <section class="publication">
-          <h2 class="title is-4" class="block-title">Publication</h2>
-          <hr />
-          <div class="block">
-            <p></p>
-          </div>
-        </section> -->
-        <section class="product" id="app">
-          <h2 class="title is-4" class="block-title">Products</h2>
-          <hr />
-          <div class="blocks columns">
-            <div
-              class="column is-6 is-12-mobile product-block-wrapper"
-              :class="{'is-left':i%2==0,'is-right':i%2==1}"
-              v-for="(product,i) in products"
-              :key="'p-'+i"
-            >
-              <div class="block product-block">
-                <img v-if="product.imageSrc" :src="product.imageSrc" />
-                <h3 class="title is-5">
-                  {{product.title}}
-                  <a v-if="product.link" :href="product.link">
-                    <span class="icon">
-                      <i class="fas fa-external-link-alt"></i>
-                    </span>
-                  </a>
-                  <a v-if="product.github" :href="product.github">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                  </a>
-                  <br />
-                  <span class="is-size-7">{{product.year}}</span>
-                  <span class="is-size-7" v-show="product.isTeam"
-                    >(共同制作)</span
-                  >
-                </h3>
-                <p v-html="product.description"></p>
-                <p class="tags">
-                  <span
-                    class="tag is-dark is-rounded"
-                    v-for="(tag,i) in product.langs"
-                    :key="'tag-'+i"
-                    >{{tag}}</span
-                  >
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
+    <div id="app"></div>
   </body>
   <script type="text/javascript" src="js/bundle.js"></script>
+
   <script
     type="text/javascript"
     src="//crowd4u.org/script/task_loader.js?requester=2154&length=10"
