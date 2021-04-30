@@ -1,11 +1,11 @@
 <template>
   <div class="main">
     <h1 class="title is-3">
-      開發功太郎
+      開發 功太郎
       <br class="is-mobile" />(Kaihotsu Kotaro)
     </h1>
-    <section class="profile">
-      <h2 class="title is-4 card-title">About me</h2>
+    <section id="profile">
+      <h2 class="section-title">About me</h2>
       <hr />
       <div class="block">
         <div class="columns">
@@ -24,8 +24,8 @@
         </div>
       </div>
     </section>
-    <section class="contact">
-      <h2 class="block-title">Contact</h2>
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
       <hr />
       <div class="block">
         <dl>
@@ -60,14 +60,14 @@
       </div>
     </section>
     <!-- <section class="publication">
-          <h2 class="title is-4" class="block-title">Publication</h2>
+          <h2 class="title is-4" class="section-title">Publication</h2>
           <hr />
           <div class="block">
             <p></p>
           </div>
     </section>-->
-    <section class="product">
-      <h2 class="block-title">Products</h2>
+    <section id="product">
+      <h2 class="section-title">Products</h2>
       <hr />
       <div class="blocks columns">
         <div
@@ -78,7 +78,7 @@
         >
           <div class="block product-block">
             <img v-if="product.imageSrc" :src="product.imageSrc" />
-            <h3 class="title is-5">
+            <h3 class="product-block-title">
               {{product.title}}
               <a v-if="product.link" :href="product.link">
                 <span class="icon">
@@ -228,47 +228,8 @@ body {
   font-size: 16px;
   font-family: 'M PLUS 1p', sans-serif !important;
 
-  .not-show {
-    display: none;
-  }
-
-  a {
-    color: forestgreen;
-  }
-
-  section {
-    margin: 4em 0em;
-  }
-
-  ul {
-    list-style: none;
-  }
-
-  dd {
-    margin-left: 3.5em;
-  }
-
-  .is-mobile {
-    display: none;
-
-    @media screen and (max-width: 480px) {
-      display: inline;
-    }
-  }
-
-  .block {
-    padding: 3em;
-    border-radius: 35px;
-    background: #f4f5f7;
-    box-shadow: 7px 7px 14px #cfd0d2, -7px -7px 14px #ffffff;
-
-    @media screen and (max-width: 480px) {
-      padding: 1.5em;
-    }
-  }
-
   .main {
-    padding: 8em 10em;
+    padding: 8em 12em;
 
     @media screen and (min-width: 1300px) {
       padding-right: 20%;
@@ -276,7 +237,7 @@ body {
     }
 
     @media screen and (max-width: 800px) {
-      padding: 5em 8em;
+      padding: 4em 8em;
     }
 
     @media screen and (max-width: 600px) {
@@ -287,60 +248,100 @@ body {
       padding: 2em;
     }
 
-    @media screen and (max-width: 480px) {
-      .block {
+    a {
+      color: forestgreen;
+    }
+
+    section {
+      margin: 4em 0em;
+
+      .section-title {
+        @media screen and (min-width: 770px) {
+          font-size: 1.5em;
+        }
+      }
+
+      .columns {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    dd {
+      margin-left: 3.5em;
+    }
+
+    .is-mobile {
+      display: none;
+
+      @media screen and (max-width: 480px) {
+        display: inline;
+      }
+    }
+
+    .not-show {
+      display: none;
+    }
+
+    .block {
+      padding: 3em;
+      border-radius: 35px;
+      background: #f4f5f7;
+      box-shadow: 7px 7px 14px #cfd0d2, -7px -7px 14px #ffffff;
+
+      @media screen and (max-width: 480px) {
         padding: 1.5em;
       }
 
-      .product-block {
-        padding: 1.5em;
+      #mypic {
+        max-height: 250px;
       }
     }
-  }
 
-  .product-block-wrapper {
-    padding: 1em 0em 3em 0em;
+    .blocks {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
 
-    .product-block {
-      padding: 2em 3em;
-      height: 100%;
+      .product-block-wrapper {
+        padding: 1em 0em 3em 0em;
+
+        .product-block {
+          padding: 2em 3em;
+          height: 100%;
+
+          @media screen and (max-width: 480px) {
+            padding: 1.5em;
+          }
+
+          .icon {
+            margin-left: 0.25rem;
+          }
+
+          .product-block-title {
+            font-size: 1.5rem;
+          }
+        }
+
+        &.is-right {
+          @media screen and (min-width: 770px) {
+            padding-left: 2em;
+            padding-right: 0em;
+          }
+        }
+
+        &.is-left {
+          @media screen and (min-width: 770px) {
+            padding-left: 0em;
+            padding-right: 2em;
+          }
+        }
+      }
     }
-  }
-
-  @media screen and (min-width: 770px) {
-    /* タブレットより大きいとき */
-    .is-right {
-      padding-left: 2em;
-      padding-right: 0em;
-    }
-
-    .is-left {
-      padding-right: 2em;
-      padding-left: 0em;
-    }
-
-    .block-title {
-      font-size: 1.5em;
-    }
-  }
-
-  .blocks {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-
-  .columns {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .icon {
-    margin-left: 5px;
-  }
-
-  #mypic {
-    max-height: 250px;
   }
 }
 </style>
