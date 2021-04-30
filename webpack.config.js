@@ -7,11 +7,18 @@ module.exports = {
   entry: "./main.js",
   output: {
     filename: "bundle.js",
-    path: path.resolve(__dirname, "public/js"),
+    publicPath: path.resolve(__dirname, "js/"),
+    path: path.resolve(__dirname, "/public/"),
   },
   module: {
     rules: [
-      { test: /\.vue$/, loader: "vue-loader" },
+      {
+        test: /\.vue$/,
+        loader: "vue-loader",
+        options: {
+          hotReload: true,
+        },
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -29,13 +36,14 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'vue$': "vue/dist/vue.esm.js",
+      vue$: "vue/dist/vue.esm.js",
     },
   },
   plugins: [new VueLoaderPlugin()],
   devServer: {
-    contentBase: "public",
-    contentBase: path.resolve(__dirname, "public"),
+    contentBase: path.resolve(__dirname, "public/"),
+    publicPath:path.resolve(__dirname, "/js/"),
     open: true,
+    hot: true,
   },
 };
