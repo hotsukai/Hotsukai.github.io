@@ -7,8 +7,8 @@ module.exports = {
   entry: "./main.js",
   output: {
     filename: "bundle.js",
-    publicPath: path.resolve(__dirname, "js/"),
-    path: path.resolve(__dirname, "public/"),
+    publicPath: path.resolve(__dirname, "docs/"),
+    path: path.resolve(__dirname, "docs/js/"),
   },
   module: {
     rules: [
@@ -41,7 +41,7 @@ module.exports = {
   },
   plugins: [new VueLoaderPlugin()],
   devServer: {
-    contentBase: path.resolve(__dirname, "public/"),
+    contentBase: path.resolve(__dirname, "docs/"),
     publicPath:path.resolve(__dirname, "/js/"),
     open: true,
     hot: true,
