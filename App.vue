@@ -5,7 +5,7 @@
       <br class="is-mobile" />(Kaihotsu Kotaro)
     </h1>
     <section id="profile">
-      <h2 class="section-title">About me</h2>
+      <h2 class="title is-4">About me</h2>
       <hr />
       <div class="block">
         <div class="columns">
@@ -25,7 +25,7 @@
       </div>
     </section>
     <section id="contact">
-      <h2 class="section-title">Contact</h2>
+      <h2 class="title is-4">Contact</h2>
       <hr />
       <div class="block">
         <dl>
@@ -67,7 +67,7 @@
           </div>
     </section>-->
     <section id="product">
-      <h2 class="section-title">Products</h2>
+      <h2 class="title is-4">Products</h2>
       <hr />
       <div class="blocks columns">
         <div
@@ -78,7 +78,7 @@
         >
           <div class="block product-block">
             <img v-if="product.imageSrc" :src="product.imageSrc" />
-            <h3 class="product-block-title">
+            <h3 class="title is-5">
               {{product.title}}
               <a v-if="product.link" :href="product.link">
                 <span class="icon">
@@ -95,7 +95,7 @@
               <span class="is-size-7" v-show="product.isTeam">(共同制作)</span>
             </h3>
             <p v-html="product.description"></p>
-            <p class="tags">
+            <p class="tags mt-2">
               <span
                 class="tag is-dark is-rounded"
                 v-for="(tag,i) in product.langs"
@@ -320,10 +320,6 @@ body {
 
           .icon {
             margin-left: 0.25rem;
-          }
-
-          .product-block-title {
-            font-size: 1.5rem;
           }
         }
 
