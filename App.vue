@@ -50,7 +50,6 @@
           </dd>
         </dl>
         <dl>
-
           <dt>
             <span>
               <i class="fas fa-phone"></i>
@@ -223,112 +222,125 @@ export default {
 };
 </script>
 
-<style>
+<style lang="stylus">
 body {
   background-color: #f4f5f7;
   font-size: 16px;
-  font-family: "M PLUS 1p", sans-serif !important;
-}
-.not-show {
-  display: none;
-}
-a {
-  color: forestgreen;
-}
-section {
-  margin: 4em 0em;
-}
+  font-family: 'M PLUS 1p', sans-serif !important;
 
-ul {
-  list-style: none;
-}
-dd {
-  margin-left: 3.5em;
-}
+  .not-show {
+    display: none;
+  }
 
-.is-mobile {
-  display: none;
-}
-.product-block {
-  padding: 2em 3em;
-  height: 100%;
-}
-.block {
-  /* display: flex; */
-  padding: 3em;
-  border-radius: 35px;
-  background: #f4f5f7;
-  box-shadow: 7px 7px 14px #cfd0d2, -7px -7px 14px #ffffff;
-}
-.main {
-  padding: 8em 10em;
-}
-@media screen and (min-width: 1300px) {
-  .main {
-    padding-right: 20%;
-    padding-left: 20%;
+  a {
+    color: forestgreen;
   }
-}
-@media screen and (max-width: 800px) {
-  .main {
-    padding: 5em 8em;
+
+  section {
+    margin: 4em 0em;
   }
-}
-@media screen and (max-width: 600px) {
-  .main {
-    padding: 4em;
+
+  ul {
+    list-style: none;
   }
-}
-@media screen and (max-width: 480px) {
-  /* スマホのみ */
-  .main {
-    padding: 2em;
+
+  dd {
+    margin-left: 3.5em;
   }
+
   .is-mobile {
-    display: inline;
+    display: none;
+
+    @media screen and (max-width: 480px) {
+      display: inline;
+    }
   }
+
   .block {
-    padding: 1.5em;
-  }
-  .product-block {
-    padding: 1.5em;
-  }
-}
+    padding: 3em;
+    border-radius: 35px;
+    background: #f4f5f7;
+    box-shadow: 7px 7px 14px #cfd0d2, -7px -7px 14px #ffffff;
 
-.product-block-wrapper {
-  padding: 1em 0em 3em 0em;
-}
-
-@media screen and (min-width: 770px) {
-  /* タブレットより大きいとき */
-  .is-right {
-    padding-left: 2em;
-    padding-right: 0em;
+    @media screen and (max-width: 480px) {
+      padding: 1.5em;
+    }
   }
-  .is-left {
-    padding-right: 2em;
-    padding-left: 0em;
+
+  .main {
+    padding: 8em 10em;
+
+    @media screen and (min-width: 1300px) {
+      padding-right: 20%;
+      padding-left: 20%;
+    }
+
+    @media screen and (max-width: 800px) {
+      padding: 5em 8em;
+    }
+
+    @media screen and (max-width: 600px) {
+      padding: 4em;
+    }
+
+    @media screen and (max-width: 480px) {
+      padding: 2em;
+    }
+
+    @media screen and (max-width: 480px) {
+      .block {
+        padding: 1.5em;
+      }
+
+      .product-block {
+        padding: 1.5em;
+      }
+    }
   }
-  .block-title {
-    font-size: 1.5em;
+
+  .product-block-wrapper {
+    padding: 1em 0em 3em 0em;
+
+    .product-block {
+      padding: 2em 3em;
+      height: 100%;
+    }
   }
-}
-.blocks {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
 
-.columns {
-  margin-left: 0;
-  margin-right: 0;
-}
+  @media screen and (min-width: 770px) {
+    /* タブレットより大きいとき */
+    .is-right {
+      padding-left: 2em;
+      padding-right: 0em;
+    }
 
-.icon {
-  margin-left: 5px;
-}
+    .is-left {
+      padding-right: 2em;
+      padding-left: 0em;
+    }
 
-#mypic {
-  max-height: 250px;
+    .block-title {
+      font-size: 1.5em;
+    }
+  }
+
+  .blocks {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .columns {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .icon {
+    margin-left: 5px;
+  }
+
+  #mypic {
+    max-height: 250px;
+  }
 }
 </style>

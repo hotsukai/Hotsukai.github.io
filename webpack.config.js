@@ -25,8 +25,8 @@ module.exports = {
         loader: "babel-loader",
       },
       {
-        test: /\.styl$/,
-        use: ["vue-style-loader", "stylus-loader", "css-loader"],
+        test: /\.stylus$/,
+        use: ["vue-style-loader",  "css-loader","stylus-loader"],
       },
       {
         test: /\.css$/,
