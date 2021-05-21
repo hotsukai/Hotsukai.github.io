@@ -4,10 +4,8 @@
       開發 功太郎
       <br class="is-mobile" />(Kaihotsu Kotaro)
     </h1>
-    <section id="profile">
-      <h2 class="title is-4">About me</h2>
-      <hr />
-      <div class="block">
+    <my-section :title="'About me'">
+      <my-card>
         <div class="columns">
           <div class="column is-6 is-12-mobile">
             <img src="images/kaihotsu.jpg" id="mypic" />
@@ -22,17 +20,16 @@
             </a>
           </div>
         </div>
-      </div>
-    </section>
-    <section id="contact">
-      <h2 class="title is-4">Contact</h2>
-      <hr />
-      <div class="block">
+      </my-card>
+    </my-section>
+    <my-section :title="'Contact'">
+      <my-card>
         <dl>
           <dt>
             <span class="icon">
               <i class="fas fa-envelope"></i>
-            </span> Mail
+            </span>
+            Mail
           </dt>
           <dd>kotaro.kaihotsu.2021b@mlab.info</dd>
         </dl>
@@ -53,33 +50,25 @@
           <dt>
             <span>
               <i class="fas fa-phone"></i>
-            </span> 研究室電話番号
+            </span>
+            研究室電話番号
           </dt>
           <dd>029-859-1556</dd>
         </dl>
-      </div>
-    </section>
-    <!-- <section class="publication">
-          <h2 class="title is-4" class="section-title">Publication</h2>
-          <hr />
-          <div class="block">
-            <p></p>
-          </div>
-    </section>-->
-    <section id="product">
-      <h2 class="title is-4">Products</h2>
-      <hr />
+      </my-card>
+    </my-section>
+    <my-section :title="'Products'">
       <div class="blocks columns">
         <div
           class="column is-6 is-12-mobile product-block-wrapper"
-          :class="{'is-left':i%2==0,'is-right':i%2==1}"
-          v-for="(product,i) in products"
-          :key="'p-'+i"
+          :class="{ 'is-left': i % 2 == 0, 'is-right': i % 2 == 1 }"
+          v-for="(product, i) in products"
+          :key="'p-' + i"
         >
-          <div class="block product-block">
+          <my-card class="product-block">
             <img v-if="product.imageSrc" :src="product.imageSrc" />
             <h3 class="title is-5">
-              {{product.title}}
+              {{ product.title }}
               <a v-if="product.link" :href="product.link">
                 <span class="icon">
                   <i class="fas fa-external-link-alt"></i>
@@ -91,26 +80,30 @@
                 </span>
               </a>
               <br />
-              <span class="is-size-7">{{product.year}}</span>
+              <span class="is-size-7">{{ product.year }}</span>
               <span class="is-size-7" v-show="product.isTeam">(共同制作)</span>
             </h3>
             <p v-html="product.description"></p>
             <p class="tags mt-2">
               <span
                 class="tag is-dark is-rounded"
-                v-for="(tag,i) in product.langs"
-                :key="'tag-'+i"
-              >{{tag}}</span>
+                v-for="(tag, i) in product.langs"
+                :key="'tag-' + i"
+                >{{ tag }}</span
+              >
             </p>
-          </div>
+          </my-card>
         </div>
       </div>
-    </section>
+    </my-section>
   </div>
 </template>
 
 <script>
+import MyCard from "./components/MyCard.vue";
+import MySection from "./components/MySection.vue";
 export default {
+  components: { MyCard, MySection },
   data() {
     return {
       products: [
@@ -245,26 +238,16 @@ body {
     }
 
     @media screen and (max-width: 480px) {
-      padding: 2em;
+      padding: 3rem 2em;
     }
 
     a {
       color: forestgreen;
     }
 
-    section {
-      margin: 4em 0em;
-
-      .section-title {
-        @media screen and (min-width: 770px) {
-          font-size: 1.5em;
-        }
-      }
-
-      .columns {
-        margin-left: 0;
-        margin-right: 0;
-      }
+    .columns {
+      margin-left: 0;
+      margin-right: 0;
     }
 
     ul {
@@ -287,19 +270,8 @@ body {
       display: none;
     }
 
-    .block {
-      padding: 3em;
-      border-radius: 35px;
-      background: #f4f5f7;
-      box-shadow: 7px 7px 14px #cfd0d2, -7px -7px 14px #ffffff;
-
-      @media screen and (max-width: 480px) {
-        padding: 1.5em;
-      }
-
-      #mypic {
-        max-height: 250px;
-      }
+    #mypic {
+      max-height: 250px;
     }
 
     .blocks {
