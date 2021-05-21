@@ -24,49 +24,51 @@
     </my-section>
     <my-section :title="'Contact'">
       <my-card>
-        <dl>
-          <dt>
-            <span class="icon">
-              <i class="fas fa-envelope"></i>
-            </span>
-            Mail
-          </dt>
-          <dd>kotaro.kaihotsu.2021b@mlab.info</dd>
-        </dl>
-        <dl>
-          <dt>
-            <span class="icon">
-              <i class="fas fa-map-marker-alt"></i>
-            </span>
-            研究室住所
-          </dt>
-          <dd>
-            〒305-8550
-            <br />つくば市春日１－２ 筑波大学 図書館情報メディア系
-            <br />森嶋・松原・伊藤研究室
-          </dd>
-        </dl>
-        <dl>
-          <dt>
-            <span>
-              <i class="fas fa-phone"></i>
-            </span>
-            研究室電話番号
-          </dt>
-          <dd>029-859-1556</dd>
-        </dl>
+        <address>
+          <dl>
+            <dt>
+              <span class="icon">
+                <i class="fas fa-envelope"></i>
+              </span>
+              Mail
+            </dt>
+            <dd>kotaro.kaihotsu.2021b@mlab.info</dd>
+          </dl>
+          <dl>
+            <dt>
+              <span class="icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </span>
+              研究室住所
+            </dt>
+            <dd>
+              〒305-8550
+              <br />つくば市春日１－２ 筑波大学 図書館情報メディア系
+              <br />森嶋・松原・伊藤研究室
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <span>
+                <i class="fas fa-phone"></i>
+              </span>
+              研究室電話番号
+            </dt>
+            <dd>029-859-1556</dd>
+          </dl>
+        </address>
       </my-card>
     </my-section>
     <my-section :title="'Products'">
-      <div class="blocks columns">
+      <div class="blocks columns is-desktop">
         <div
-          class="column is-6 is-12-mobile product-block-wrapper"
+          class="column is-6 is-12-touch product-block-wrapper"
           :class="{ 'is-left': i % 2 == 0, 'is-right': i % 2 == 1 }"
           v-for="(product, i) in products"
           :key="'p-' + i"
         >
           <my-card class="product-block">
-            <img v-if="product.imageSrc" :src="product.imageSrc" />
+            <img v-if="product.imageSrc" v-lazy="product.imageSrc" />
             <h3 class="title is-5">
               {{ product.title }}
               <a v-if="product.link" :href="product.link">
@@ -245,6 +247,10 @@ body {
       color: forestgreen;
     }
 
+    address {
+      font-style: normal;
+    }
+
     .columns {
       margin-left: 0;
       margin-right: 0;
@@ -256,6 +262,7 @@ body {
 
     dd {
       margin-left: 3.5em;
+      overflow-wrap: break-word;
     }
 
     .is-mobile {
@@ -275,12 +282,11 @@ body {
     }
 
     .blocks {
-      display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
 
       .product-block-wrapper {
-        padding: 1em 0em 3em 0em;
+        padding: 0em 0em 4em 0em;
 
         .product-block {
           padding: 2em 3em;
@@ -295,15 +301,13 @@ body {
           }
         }
 
-        &.is-right {
-          @media screen and (min-width: 770px) {
+        @media screen and (min-width: 1024px) {
+          &.is-right {
             padding-left: 2em;
             padding-right: 0em;
           }
-        }
 
-        &.is-left {
-          @media screen and (min-width: 770px) {
+          &.is-left {
             padding-left: 0em;
             padding-right: 2em;
           }
