@@ -1,111 +1,53 @@
 <template>
-  <div class="main">
-    <h1 class="title is-3">
-      開發 功太郎
-      <br class="is-mobile" />(Kaihotsu Kotaro)
-    </h1>
-    <my-section :title="'About me'">
-      <my-card>
-        <div class="columns">
-          <div class="column is-6 is-12-mobile">
-            <img src="images/kaihotsu.jpg" id="mypic" />
-          </div>
-          <div class="column is-6 is-12-mobile">
-            <p>2000年生まれ</p>
-            <p>神奈川県出身</p>
-            <p>筑波大学 情報学群 情報メディア創成学類 3年</p>
-            <p>融合知能デザイン研究室</p>
-            <a class="microtask repeat" href="//crowd4u.org">
-              <img src="//crowd4u.org/img/crowd4u_banner364x93.png" />
+  <my-section :title="'Products'">
+    <div class="blocks columns is-desktop mt-5">
+      <div
+        class="column is-6 is-12-touch product-block-wrapper"
+        :class="{ 'is-left': i % 2 == 0, 'is-right': i % 2 == 1 }"
+        v-for="(product, i) in products"
+        :key="'p-' + i"
+      >
+        <my-card class="product-block">
+          <img v-if="product.imageSrc" v-lazy="product.imageSrc" />
+          <h3 class="title is-5">
+            {{ product.title }}
+            <a v-if="product.link" :href="product.link">
+              <span class="icon">
+                <i class="fas fa-external-link-alt"></i>
+              </span>
             </a>
-          </div>
-        </div>
-      </my-card>
-    </my-section>
-    <my-section :title="'Contact'">
-      <my-card>
-        <address>
-          <dl>
-            <dt>
+            <a v-if="product.github" :href="product.github">
               <span class="icon">
-                <i class="fas fa-envelope"></i>
+                <i class="fab fa-github"></i>
               </span>
-              Mail
-            </dt>
-            <dd>kotaro.kaihotsu.2021b@mlab.info</dd>
-          </dl>
-          <dl>
-            <dt>
-              <span class="icon">
-                <i class="fas fa-map-marker-alt"></i>
-              </span>
-              研究室住所
-            </dt>
-            <dd>
-              〒305-8550
-              <br />つくば市春日１－２ 筑波大学 図書館情報メディア系
-              <br />森嶋・松原・伊藤研究室
-            </dd>
-          </dl>
-          <dl>
-            <dt>
-              <span>
-                <i class="fas fa-phone"></i>
-              </span>
-              研究室電話番号
-            </dt>
-            <dd>029-859-1556</dd>
-          </dl>
-        </address>
-      </my-card>
-    </my-section>
-    <my-section :title="'Products'">
-      <div class="blocks columns is-desktop">
-        <div
-          class="column is-6 is-12-touch product-block-wrapper"
-          :class="{ 'is-left': i % 2 == 0, 'is-right': i % 2 == 1 }"
-          v-for="(product, i) in products"
-          :key="'p-' + i"
-        >
-          <my-card class="product-block">
-            <img v-if="product.imageSrc" v-lazy="product.imageSrc" />
-            <h3 class="title is-5">
-              {{ product.title }}
-              <a v-if="product.link" :href="product.link">
-                <span class="icon">
-                  <i class="fas fa-external-link-alt"></i>
-                </span>
-              </a>
-              <a v-if="product.github" :href="product.github">
-                <span class="icon">
-                  <i class="fab fa-github"></i>
-                </span>
-              </a>
-              <br />
-              <span class="is-size-7">{{ product.year }}</span>
-              <span class="is-size-7" v-show="product.isTeam">(共同制作)</span>
-            </h3>
-            <p v-html="product.description"></p>
-            <p class="tags mt-2">
-              <span
-                class="tag is-dark is-rounded"
-                v-for="(tag, i) in product.langs"
-                :key="'tag-' + i"
-                >{{ tag }}</span
-              >
-            </p>
-          </my-card>
-        </div>
+            </a>
+            <br />
+            <span class="is-size-7">{{ product.year }}</span>
+            <span class="is-size-7" v-show="product.isTeam">(共同制作)</span>
+          </h3>
+          <p v-html="product.description"></p>
+          <p class="tags mt-2">
+            <span
+              class="tag is-dark is-rounded"
+              v-for="(tag, i) in product.langs"
+              :key="'tag-' + i"
+              >{{ tag }}</span
+            >
+          </p>
+        </my-card>
       </div>
-    </my-section>
-  </div>
+    </div>
+  </my-section>
 </template>
 
 <script>
-import MyCard from "./components/MyCard.vue";
-import MySection from "./components/MySection.vue";
+import MyCard from "@/components/molecules/MyCard.vue";
+import MySection from "@/components/molecules/MySection.vue";
 export default {
-  components: { MyCard, MySection },
+  components: {
+    MyCard,
+    MySection,
+  },
   data() {
     return {
       products: [
@@ -217,101 +159,41 @@ export default {
 };
 </script>
 
-<style lang="stylus">
-body {
-  background-color: #f4f5f7;
-  font-size: 16px;
-  font-family: 'M PLUS 1p', sans-serif !important;
+<style lang="stylus" scoped>
+.blocks {
+  justify-content: space-around;
+  flex-wrap: wrap;
 
-  .main {
-    padding: 8em 12em;
+  &.columns {
+    margin-left: 0;
+    margin-right: 0;
+  }
 
-    @media screen and (min-width: 1300px) {
-      padding-right: 20%;
-      padding-left: 20%;
-    }
+  .product-block-wrapper {
+    padding: 0em 0em 4em 0em;
 
-    @media screen and (max-width: 800px) {
-      padding: 4em 8em;
-    }
-
-    @media screen and (max-width: 600px) {
-      padding: 4em;
-    }
-
-    @media screen and (max-width: 480px) {
-      padding: 3rem 2em;
-    }
-
-    a {
-      color: forestgreen;
-    }
-
-    address {
-      font-style: normal;
-    }
-
-    .columns {
-      margin-left: 0;
-      margin-right: 0;
-    }
-
-    ul {
-      list-style: none;
-    }
-
-    dd {
-      margin-left: 3.5em;
-      overflow-wrap: break-word;
-    }
-
-    .is-mobile {
-      display: none;
+    .product-block {
+      padding: 2em 3em;
+      height: 100%;
 
       @media screen and (max-width: 480px) {
-        display: inline;
+        padding: 1.5em;
+      }
+
+      .icon {
+        margin-left: 0.25rem;
       }
     }
 
-    .not-show {
-      display: none;
-    }
+    @media screen and (min-width: 1024px) {
+      &.is-right {
+        padding-left: 2em;
+        padding-right: 0em;
+      }
 
-    #mypic {
-      max-height: 250px;
-    }
-
-    .blocks {
-      justify-content: space-around;
-      flex-wrap: wrap;
-
-      .product-block-wrapper {
-        padding: 0em 0em 4em 0em;
-
-        .product-block {
-          padding: 2em 3em;
-          height: 100%;
-
-          @media screen and (max-width: 480px) {
-            padding: 1.5em;
-          }
-
-          .icon {
-            margin-left: 0.25rem;
-          }
-        }
-
-        @media screen and (min-width: 1024px) {
-          &.is-right {
-            padding-left: 2em;
-            padding-right: 0em;
-          }
-
-          &.is-left {
-            padding-left: 0em;
-            padding-right: 2em;
-          }
-        }
+      &.is-left {
+        padding-left: 0em;
+        padding-right: 2em;
       }
     }
   }
