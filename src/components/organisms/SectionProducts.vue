@@ -27,7 +27,7 @@
             <span class="is-size-7" v-show="product.isTeam">(共同制作)</span>
           </h3>
           <p v-html="product.description"></p>
-          <p class="tags mt-2">
+          <p class="tags mt-5">
             <span
               class="tag is-rounded"
               v-for="(tag, i) in product.langs"
