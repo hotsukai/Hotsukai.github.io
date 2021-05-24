@@ -50,5 +50,9 @@ export default {
 <style lang="stylus" scoped>
 address {
   font-style: normal;
+  dl{
+    margin-bottom 1rem
+  }
 }
+
 </style>

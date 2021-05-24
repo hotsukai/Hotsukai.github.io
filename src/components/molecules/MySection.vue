@@ -15,11 +15,14 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@import "../../variables.styl";
+
 section {
   margin: 4rem 0em;
 
   .title {
     margin-bottom: 2rem;
+    color font-color
   }
 }
 </style>

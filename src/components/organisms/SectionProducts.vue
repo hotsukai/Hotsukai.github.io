@@ -160,6 +160,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@import '../../variables.styl';
+
 .blocks {
   justify-content: space-around;
   flex-wrap: wrap;
@@ -199,20 +201,24 @@ export default {
         transition: all 0.2s ease;
         letter-spacing: 0.025em;
         font-size: 1rem;
-        border-color: #d1d9e6;
-        box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
+        box-shadow: 3px 3px 6px shadow-dark, -3px -3px 6px shadow-light;
         border-radius: 2rem;
 
         &:hover {
-          box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+          box-shadow: inset 2px 2px 5px shadow-dark, inset -3px -3px 7px shadow-light;
           background-color: transparent;
           border-color: #d1d9e6;
         }
       }
 
       .tag {
-        box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+        box-shadow: inset 2px 2px 5px shadow-dark, inset -3px -3px 7px shadow-light;
+        padding-top 0.2rem
         background-color: transparent;
+      }
+
+      .title {
+        color: font-color;
       }
     }
 

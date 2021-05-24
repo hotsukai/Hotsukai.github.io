@@ -6,13 +6,15 @@
           <img src="images/kaihotsu.jpg" id="mypic" />
         </div>
         <div class="column is-6 is-12-mobile">
+          <p>筑波大学 情報学群 情報メディア創成学類 4年</p>
+          <p>
+            融合知能デザイン研究室
+            <a class="microtask repeat" href="//crowd4u.org">
+              <img src="//crowd4u.org/img/crowd4u_banner364x93.png" />
+            </a>
+          </p>
           <p>2000年生まれ</p>
           <p>神奈川県出身</p>
-          <p>筑波大学 情報学群 情報メディア創成学類 3年</p>
-          <p>融合知能デザイン研究室</p>
-          <a class="microtask repeat" href="//crowd4u.org">
-            <img src="//crowd4u.org/img/crowd4u_banner364x93.png" />
-          </a>
         </div>
       </div>
     </my-card>
@@ -31,5 +33,9 @@ export default {
 #mypic {
   max-height: 250px;
   border-radius: 0.6rem;
+}
+
+p {
+  margin-bottom: 1rem;
 }
 </style>

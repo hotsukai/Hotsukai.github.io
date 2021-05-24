@@ -29,8 +29,10 @@ export default {
 </script>
 
 <style lang="stylus">
+@import "./variables.styl";
 body {
-  background-color: #f4f5f7;
+  background-color: bg-color;
+  color: font-color
   font-size: 16px;
   font-family: 'M PLUS 1p', sans-serif !important;
 
