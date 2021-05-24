@@ -190,7 +190,7 @@ export default {
       .no-image {
         width: 100%;
         height: 10rem;
-        background-color: white;
+        background-color: bg-color-darker;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -213,7 +213,6 @@ export default {
 
       .tag {
         box-shadow: inset 2px 2px 5px shadow-dark, inset -3px -3px 7px shadow-light;
-        padding-top 0.2rem
         background-color: transparent;
       }
 
