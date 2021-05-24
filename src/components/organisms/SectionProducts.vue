@@ -11,12 +11,12 @@
           <img v-if="product.imageSrc" v-lazy="product.imageSrc" />
           <h3 class="title is-5">
             {{ product.title }}
-            <a v-if="product.link" :href="product.link">
+            <a v-if="product.link" :href="product.link" target="_blank">
               <span class="icon">
                 <i class="fas fa-external-link-alt"></i>
               </span>
             </a>
-            <a v-if="product.github" :href="product.github">
+            <a v-if="product.github" :href="product.github" target="_blank">
               <span class="icon">
                 <i class="fab fa-github"></i>
               </span>
