@@ -8,7 +8,8 @@
         :key="'p-' + i"
       >
         <my-card class="product-block">
-          <img v-if="product.imageSrc" v-lazy="product.imageSrc" />
+          <img v-if="product.imageSrc" v-lazy="product.imageSrc" class="img" />
+          <div v-else class="no-image img">NO IMAGE</div>
           <h3 class="title is-5">
             {{ product.title }}
             <a v-if="product.link" :href="product.link" target="_blank">
@@ -28,11 +29,10 @@
           <p v-html="product.description"></p>
           <p class="tags mt-2">
             <span
-              class="tag is-dark is-rounded"
+              class="tag is-rounded"
               v-for="(tag, i) in product.langs"
               :key="'tag-' + i"
-              >{{ tag }}</span
-            >
+            >{{ tag }}</span>
           </p>
         </my-card>
       </div>
@@ -180,8 +180,39 @@ export default {
         padding: 1.5em;
       }
 
+      .img {
+        margin-bottom: 1.5rem;
+        border-radius: 0.6rem;
+      }
+
+      .no-image {
+        width: 100%;
+        height: 10rem;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
       .icon {
         margin-left: 0.25rem;
+        transition: all 0.2s ease;
+        letter-spacing: 0.025em;
+        font-size: 1rem;
+        border-color: #d1d9e6;
+        box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
+        border-radius: 2rem;
+
+        &:hover {
+          box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+          background-color: transparent;
+          border-color: #d1d9e6;
+        }
+      }
+
+      .tag {
+        box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+        background-color: transparent;
       }
     }
 

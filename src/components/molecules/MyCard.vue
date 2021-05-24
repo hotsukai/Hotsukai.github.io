@@ -15,8 +15,7 @@ export default {
   padding: 3em;
   border-radius: 35px;
   background: #f4f5f7;
-  box-shadow: 7px 7px 14px #cfd0d2, -7px -7px 14px #ffffff;
-
+  box-shadow: 6px 6px 12px #cfd0d2, -6px -6px 12px #ffffff;
   @media screen and (max-width: 480px) {
     padding: 1.5em;
   }

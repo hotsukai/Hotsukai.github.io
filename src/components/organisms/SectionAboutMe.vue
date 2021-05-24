@@ -30,5 +30,6 @@ export default {
 <style lang="stylus" scoped>
 #mypic {
   max-height: 250px;
+  border-radius: 0.6rem;
 }
 </style>
