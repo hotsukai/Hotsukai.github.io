@@ -7,6 +7,7 @@
     <section-about-me />
     <section-contact />
     <section-products />
+    <section-carrer />
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import MySection from "@/components/molecules/MySection.vue";
 import SectionAboutMe from "@/components/organisms/SectionAboutMe.vue";
 import SectionContact from "@/components/organisms/SectionContact.vue";
 import SectionProducts from "@/components/organisms/SectionProducts.vue";
+import SectionCarrer from "@/components/organisms/SectionCarrer.vue";
 
 export default {
   components: {
@@ -24,15 +26,17 @@ export default {
     SectionAboutMe,
     SectionContact,
     SectionProducts,
+    SectionCarrer,
   },
 };
 </script>
 
 <style lang="stylus">
-@import "./variables.styl";
+@import './variables.styl';
+
 body {
   background-color: bg-color;
-  color: font-color
+  color: font-color;
   font-size: 16px;
   font-family: 'M PLUS 1p', sans-serif !important;
 
@@ -64,10 +68,10 @@ body {
       list-style: none;
     }
 
-    dd {
-      margin-left: 3.5em;
-      overflow-wrap: break-word;
-    }
+    // dd {
+    //   margin-left: 3.5em;
+    //   overflow-wrap: break-word;
+    // }
 
     .is-mobile {
       display: none;

@@ -9,8 +9,7 @@
       >
         <my-card class="product-block">
           <div v-if="product.imageSrc">
-            <img v-if="i<=6" :src="product.imageSrc" class="img" />
-            <img v-else v-lazy="product.imageSrc" class="img" />
+            <img v-lazy="product.imageSrc" class="img" />
           </div>
           <div v-else class="no-image img">NO IMAGE</div>
           <h3 class="title is-5">
@@ -166,7 +165,7 @@ export default {
 @import '../../variables.styl';
 
 .blocks {
-  justify-content: space-around;
+  justify-content: flex-start;
   flex-wrap: wrap;
 
   &.columns {
