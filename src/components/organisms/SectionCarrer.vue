@@ -5,8 +5,9 @@
         <dt>
           <p class="title is-5 mb-3">
             <span class="icon mr-2">
-              <i class="fas fa-map-marker-alt"></i> </span
-            >Education
+              <i class="fas fa-map-marker-alt"></i> 
+            </span>
+            Education
           </p>
         </dt>
         <dd>
@@ -16,8 +17,7 @@
               :key="education.name"
               class="mb-4"
             >
-              <p v-html="education.name">
-              </p>
+              <p v-html="education.name" class="title is-6 mb-0"></p>
               <p class="is-size-7">{{ education.season }}</p>
             </li>
           </ul>
@@ -33,11 +33,11 @@
         <dd>
           <ul>
             <li v-for="intern in interns" :key="intern.name" class="mb-4">
-              <p>
+              <p class="title is-6 mb-0">
                 {{ intern.name }}
-                <span class="is-size-7 pl-2">{{ intern.season }}</span>
               </p>
-              <p class="is-size-7">{{ intern.description }}</p>
+              <span class="is-size-7">{{ intern.season }}</span>
+              <p class="is-size-6">{{ intern.description }}</p>
             </li>
           </ul>
         </dd>
@@ -55,8 +55,11 @@ export default {
   data: () => {
     return {
       educations: [
+        {
+          season: "2018/04 -",
+          name: "筑波大学 情報学群<br class='is-hidden-tablet'> 情報メディア創成学類",
+        },
         { season: "2015/04 - 2018/03", name: "桐蔭学園高等学校 理数科" },
-        { season: "2018/04 -", name: "筑波大学 情報学群<br class='is-hidden-tablet'> 情報メディア創成学類" },
       ],
       interns: [
         // { name: "Wantedly, Inc.", season: "2021/9", description: "" },
@@ -83,4 +86,8 @@ export default {
 };
 </script>
 
-<style lang="stylus" scoped></style>
+<style lang="stylus" scoped>
+dd {
+  margin-left: 2rem;
+}
+</style>
