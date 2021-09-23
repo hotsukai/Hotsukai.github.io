@@ -62,7 +62,7 @@ export default {
         { season: "2015/04 - 2018/03", name: "桐蔭学園高等学校 理数科" },
       ],
       interns: [
-        // { name: "Wantedly, Inc.", season: "2021/9", description: "" },
+        { name: "Wantedly, Inc.", season: "2021/9", description: "Reactを用いた開発." },
         {
           name: "Nyle Inc.",
           season: "2020/10-",
