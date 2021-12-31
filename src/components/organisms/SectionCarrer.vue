@@ -7,7 +7,7 @@
             <span class="icon mr-2">
               <i class="fas fa-map-marker-alt"></i> 
             </span>
-            Education
+            学歴
           </p>
         </dt>
         <dd>
@@ -27,7 +27,26 @@
         <dt>
           <p class="title is-5 mb-3">
             <span class="icon"> <i class="fas fa-map-marker-alt"></i> </span>
-            Intern
+            職歴
+          </p>
+        </dt>
+        <dd>
+          <ul>
+            <li v-for="workHistory in workHistories" :key="workHistory.name" class="mb-4">
+              <p class="title is-6 mb-0">
+                {{ workHistory.name }}
+              </p>
+              <span class="is-size-7">{{ workHistory.season }}</span>
+              <p class="is-size-6">{{ workHistory.description }}</p>
+            </li>
+          </ul>
+        </dd>
+      </dl>
+      <dl>
+        <dt>
+          <p class="title is-5 mb-3">
+            <span class="icon"> <i class="fas fa-map-marker-alt"></i> </span>
+            インターン
           </p>
         </dt>
         <dd>
@@ -60,6 +79,10 @@ export default {
           name: "筑波大学 情報学群<wbr /> 情報メディア創成学類",
         },
         { season: "2015/04 - 2018/03", name: "桐蔭学園高等学校 理数科" },
+      ],
+      workHistories:[
+        { name: "DiningX, Inc.", season: "2021/9 - ", description: "スクラムマスター・エンジニアとして新規プロダクトの立ち上げ・価値検証をともに行った．" },
+
       ],
       interns: [
         { name: "CAM, Inc. ( CyberAgent group )", season: "2022/1 - ", description: "( 予定 )" },
