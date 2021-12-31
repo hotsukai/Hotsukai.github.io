@@ -57,15 +57,16 @@ export default {
       educations: [
         {
           season: "2018/04 -",
-          name: "筑波大学 情報学群<br class='is-hidden-tablet'> 情報メディア創成学類",
+          name: "筑波大学 情報学群<wbr /> 情報メディア創成学類",
         },
         { season: "2015/04 - 2018/03", name: "桐蔭学園高等学校 理数科" },
       ],
       interns: [
-        { name: "Wantedly, Inc.", season: "2021/9", description: "Reactを用いた開発." },
+        { name: "CAM, Inc. ( CyberAgent group )", season: "2022/1 - ", description: "( 予定 )" },
+        { name: "Wantedly, Inc.", season: "2021/9", description: "Reactを用いた開発. Wantedly PalseのUX向上のための実装など" },
         {
           name: "Nyle Inc.",
-          season: "2020/10-",
+          season: "2020/10 - 2021/12",
           description:
             "社内ツールの開発, Gatsby.jsを用いた「おトクにマイカー 定額カルモくん」の開発, プロコン運営など",
         },
