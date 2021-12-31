@@ -9,7 +9,7 @@
       >
         <my-card class="product-block">
           <div v-if="product.imageSrc">
-            <img :src="product.imageSrc" class="img" />
+            <img :src="product.imageSrc" class="img"/>
           </div>
           <div v-else class="no-image img">NO IMAGE</div>
           <h3 class="title is-5">
@@ -54,8 +54,30 @@ export default {
     return {
       products: [
         {
+          title: "ReCoPo クライアント向けアプリ",
+          year: "2021/10-",
+          description:
+            "ReCoPo契約店舗向けアプリ．アンケートや口コミの分析結果が提供されることで店舗改善をすすめることができる．Webフロント，バックエンドの実装の他，スクラムマスターを担当し仮説検証を行っている．",
+          langs: ["TypeScript","React.js", "Express", "Firebase", "Prisma", "GitHub Actions"],
+          isTeam: true,
+          imageSrc: "images/ReCoPo-Client.png",
+          github: "",
+          link: "",
+        },
+        {
+          title: "ReCoPo",
+          year: "2021/9 -",
+          description:
+            "アンケートを書くことでお店で使えるクーポンがもらえるアプリ．Webフロント，バックエンド，モバイルの実装の他，スクラムマスターを担当．",
+          langs:["TypeScript", "React.js", "Express", "Flutter", "Firebase", "GitHub Actions"],
+          isTeam: true,
+          imageSrc: "images/ReCoPo.png",
+          github: "",
+          link: "",
+        },
+        {
           title: "HigaCoffee Database",
-          year: "2020/8-",
+          year: "2020/8 - 2021/4",
           description:
             "T-ACT発の筑波大学公認サークルHiga Coffeeのシステム．<br>データを活用することでその人にぴったりなコーヒーを抽出するお手伝いをする．<br>バックエンド・フロントエンド・PMを担当．",
           langs: ["Nuxt.js (TypeScript)", "Flask (Python)", "Firebase"],
@@ -187,6 +209,7 @@ export default {
       .img {
         margin-bottom: 1.5rem;
         border-radius: 0.6rem;
+        max-height: 20rem;
       }
 
       .no-image {
