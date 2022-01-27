@@ -81,11 +81,11 @@ export default {
         { season: "2015/04 - 2018/03", name: "桐蔭学園高等学校 理数科" },
       ],
       workHistories:[
-        { name: "DiningX, Inc.", season: "2021/9 - ", description: "スクラムマスター・エンジニアとして新規プロダクトの立ち上げ・価値検証をともに行った．" },
+        { name: "DiningX, Inc.", season: "2021/9 - ", description: "スクラムマスター・エンジニアとして新規プロダクトの立ち上げ・価値検証を行っている．" },
 
       ],
       interns: [
-        { name: "CAM, Inc. ( CyberAgent group )", season: "2022/1 - ", description: "( 予定 )" },
+        { name: "CAM, Inc. ( CyberAgent group )", season: "2022/1 - ", description: "" },
         { name: "Wantedly, Inc.", season: "2021/9", description: "Reactを用いた開発. Wantedly PalseのUX向上のための実装など" },
         {
           name: "Nyle Inc.",
